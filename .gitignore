@@ -3,10 +3,13 @@ build/
 run/
 out/
 .idea/
+.vscode/
+.agents/
+re-tools/
+re-targets/
 *.iml
 *.ipr
 *.iws
-.vscode/
 *.log
-re-tools/
-re-targets/
+*.javap.txt
+release/
