@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "rllod",
+    "name": "RLCraft Minimal LOD",
+    "description": "High-performance, minimal client-side Level of Detail (LOD) engine for Minecraft 1.12.2, compatible with OptiFine and RLCraft 2.9.3.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["ArgonArchitect"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

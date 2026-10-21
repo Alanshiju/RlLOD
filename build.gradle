@@ -1,0 +1,83 @@
+plugins {
+    id 'java-library'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.4.2'
+}
+
+version = project.mod_version
+group = project.mod_group
+base {
+    archivesName = project.mod_archives_name
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+    withSourcesJar()
+}
+
+minecraft {
+    mcVersion = '1.12.2'
+    mcpMappingChannel = 'stable'
+    mcpMappingVersion = '39'
+    username = 'DevPlayer'
+    useDependencyAccessTransformers = true
+
+    extraRunJvmArguments.addAll([
+        '-Xmx4G',
+        '-XX:+UnlockExperimentalVMOptions',
+        '-XX:+UseG1GC'
+    ])
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'GTNH Maven'
+        url = 'https://nexus.gtnewhorizons.com/repository/public/'
+    }
+    maven {
+        name = 'CleanroomMC'
+        url = 'https://maven.cleanroommc.com'
+    }
+    maven {
+        name = 'SpongePowered'
+        url = 'https://repo.spongepowered.org/repository/maven-public/'
+    }
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    inputs.property 'version', project.mod_version
+    inputs.property 'mcversion', '1.12.2'
+
+    filesMatching(['mcmod.info', 'pack.mcmeta']) {
+        expand 'version': project.mod_version, 'mcversion': '1.12.2'
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title': project.mod_id,
+            'Specification-Version': project.mod_version,
+            'Implementation-Title': project.mod_name,
+            'Implementation-Version': project.mod_version
+        ])
+    }
+}
+

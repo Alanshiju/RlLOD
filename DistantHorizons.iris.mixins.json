@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.seibel.distanthorizons.forge112.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.7",
+  "client": [
+    "client.MixinFramebuffer"
+  ],
+  "refmap": "DistantHorizons.iris.mixins-refmap.json"
+}
