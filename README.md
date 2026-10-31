@@ -76,4 +76,4 @@ This project is built upon the collective research and innovations of the broade
 
 ## License
 
-MIT License
+This project is licensed under the [MIT License](LICENSE).
