@@ -6,6 +6,12 @@ It captures and caches terrain and structures beyond the standard render distanc
 
 ---
 
+> [!NOTE]
+> ### Educational Purpose Disclaimer
+> This project is developed strictly for **educational and personal learning purposes** as part of an independent undergraduate computer science study. It is a non-commercial, open-source personal project and is not intended to infringe on any existing intellectual properties.
+
+---
+
 ## Features
 
 - **Client-Side Only:** Runs entirely on the client with zero server-side tick overhead.
@@ -56,6 +62,15 @@ It captures and caches terrain and structures beyond the standard render distanc
 
 - Minor height/seam overlap can occasionally appear at the immediate boundary between loaded vanilla chunks and the first LOD ring when flying.
 - Heavily forested distant mountains at coarse LOD tiers may appear predominantly green due to tree canopy color averaging.
+
+---
+
+## Acknowledgments & Open-Source Attribution
+
+This project is built upon the collective research and innovations of the broader voxel graphics and Minecraft modding communities:
+
+- **[Distant Horizons](https://gitlab.com/distant-horizons/distant-horizons)** — Major credit and sincere gratitude go to the creators and contributors of the **Distant Horizons** project for pioneering and popularizing the concept and implementation of Level of Detail (LOD) rendering pipelines in Minecraft. Their groundbreaking work demonstrated what is possible with distant terrain visualization and remains a primary inspiration in this domain.
+- **Open-Source Modding Community** — This project draws significant architectural inspiration from open-source graphics, rendering techniques, and community-driven patterns established within the Minecraft modding ecosystem.
 
 ---
 
